@@ -1,6 +1,8 @@
 # s3-iam-test
 AWS CLIを使用して、s3のバケットポリシーの動作を確認します。
 
+<br />
+
 ## 準備
 
 1. ユーザ作成
@@ -23,6 +25,8 @@ AWS CLIを使用して、s3のバケットポリシーの動作を確認しま�
     Default region name [None]: ap-northeast-1
     Default output format [None]: json
     ```
+
+<br />
 
 ## s3で実験
 
@@ -55,13 +59,16 @@ AWS CLIを使用して、s3のバケットポリシーの動作を確認しま�
     $ aws s3 ls s3://${bucket} --profile test
     ```
 
-## s3の後片付け
+<br />
 
+## 後片付け
+
+1. s3
     ```
     $ aws s3 rb s3://${bucket} --force  
     ```
 
-## IAMユーザの後片付け
+2. IAMユーザ
     ```
     $ sh delete_user.sh
 
